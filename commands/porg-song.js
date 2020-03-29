@@ -3,7 +3,8 @@ module.exports = {
 	name: 'porg-song',
 	description: 'Makes the bot join the voice channel you are in, and plays a special song.',
 	execute(message, args) {
-		console.log(message);
+		/*
+		 console.log(message);
 		const voiceChannel = message.member.voice.channel;
 
 		if (!voiceChannel) {
@@ -20,6 +21,10 @@ module.exports = {
 			catch {
 				console.log(Error);
 			}
-		});
+			
+		}
+		
+		);
+		*/
 	}
 };

@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Ready!');
-    client.user.setActivity('p!help', { type: 'LISTENING' });
+    client.user.setActivity('with fire || p!help');
     
 });
 
