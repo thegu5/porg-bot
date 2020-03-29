@@ -32,4 +32,4 @@ NOTE: opusscript, ytdl-core and ffmpeg-static are needed only for the incomplete
 ### That's it!
 
 Your simple discord bot can be run using `node .` with the command line while in the correct repository. (use cd [the file's path] to get there).
-"# porg-bot" 
+
