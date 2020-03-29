@@ -1,6 +1,6 @@
 # Porg-bot
 
-This is the public github repository for Porg Bot.
+This is the public github repository for Porg Bot. Porg Bot is a good bot.
 
 ## Setup
 
