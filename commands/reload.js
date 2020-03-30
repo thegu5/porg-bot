@@ -2,6 +2,7 @@ module.exports = {
 	name: 'reload',
 	description: 'Reloads a command',
 	execute(message, args) {
+        if (message.author.id === '639966783213928448') {
 		if (!args.length) return message.channel.send(`You didn't pass any command to reload, ${message.author}!`);
         const commandName = args[0].toLowerCase();
         const command = message.client.commands.get(commandName)
@@ -17,5 +18,8 @@ module.exports = {
             message.channel.send(`There was an error while reloading a command \`${commandName}\`:\n\`${error.message}\``);
         }
         message.channel.send(`Command \`${commandName}\` was reloaded!`);
+    } else {
+        message.channel.send(`You aren't the owner of the bot!`)
+    }
             },
 };

@@ -3,6 +3,7 @@ module.exports = {
 	name: 'porg-song',
 	description: 'Makes the bot join the voice channel you are in, and plays a special song.',
 	execute(message, args) {
+		message.channel.send(`Sorry ${message.author}, this command is currently in the works.`);
 		/*
 		 console.log(message);
 		const voiceChannel = message.member.voice.channel;
