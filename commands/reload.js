@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'reload',
-	description: 'Reloads a command',
+	description: 'You can\'t use this command',
 	execute(message, args) {
         if (message.author.id === '639966783213928448') {
 		if (!args.length) return message.channel.send(`You didn't pass any command to reload, ${message.author}!`);
