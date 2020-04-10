@@ -27,7 +27,7 @@ get them with npm:
 
 `npm install ytdl-core discord.js opusscript ffmpeg-static`
 
-NOTE: opusscript, ytdl-core and ffmpeg-static are needed only for the incomplete `porg-song` command. I reccomend that you delete the porg-song.js file until it is complete.
+NOTE: opusscript, ytdl-core and ffmpeg-static are needed only for the incomplete `porg-song` command. They are not needed currently.
 
 ### That's it!
 
