@@ -1,4 +1,5 @@
 const fs = require('fs');
+const scores = require("./porgscore.json");
 const ytdl = require('ytdl-core');
 const Discord = require('discord.js');
 const ffmpeg = require('ffmpeg-static');
@@ -15,18 +16,36 @@ for (const file of commandFiles) {
 client.once('ready', () => {
     console.log('Ready!');
     client.user.setActivity('with fire || p!help');
-    
+    function timeoutFunc() {
+        setTimeout(timeoutCallback(), 5000) 
+    }
+    function callTimeoutFunc() {
+        timeoutFunc();
+    };
+    function timeoutCallback() {
+        client.user.setActivity('with fire || p!help');
+        callTimeoutFunc();
+    };
 });
 
 client.on('message', message => {
+    if(message.author.bot) return;
+if(!scores[message.author.id]){ 
+	scores[message.author.id] = { 
+		money: 0 
+	};
+}
+scores[message.author.id].money += 1;
+fs.writeFileSync("./porgscore.json", JSON.stringify(scores));
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+    
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName)
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         if (!command) return;
-	if (!command) return;
+    if (!command) return;
+    
     if (command.guildOnly && message.channel.type !== 'text') {
         return message.reply('I can\'t execute that command inside DMs!');
     }

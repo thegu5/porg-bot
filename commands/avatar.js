@@ -4,16 +4,23 @@ module.exports = {
     aliases: ['icon', 'pfp'],
     description: 'Lists user avatar links',
 	execute(message, args) {
-		if (!message.mentions.users.size) {
-            return message.channel.send(`Your avatar: <${message.author.displayAvatarURL}>`);
+        function getUserFromMention(mention) {
+            const matches = mention.match(/^<@!?(\d+)>$/);
+            if (!matches) return;
+            const id = matches[1];
+            return client.users.cache.get(id);
         }
         
-        const avatarList = message.mentions.users.map(user => {
-            return `${user.username}'s avatar: <${user.displayAvatarURL}>`;
-        });
         
-        // send the entire array of strings as a message
-        // by default, discord.js will `.join()` the array with `\n`
-        message.channel.send(avatarList);
-	},
+        if (args[0]) {
+            const user = getUserFromMention(args[0]);
+            if (!user) {
+                return message.reply('Please use a proper mention if you want to see someone else\'s avatar.');
+            }
+    
+            return message.channel.send(`${user.username}'s avatar: ${user.displayAvatarURL({ dynamic: true })}`);
+        }
+    
+        return message.channel.send(`${message.author.username}, your avatar: ${message.author.displayAvatarURL({ dynamic: true })}`);
+	}
 };
