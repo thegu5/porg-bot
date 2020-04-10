@@ -16,16 +16,11 @@ for (const file of commandFiles) {
 client.once('ready', () => {
     console.log('Ready!');
     client.user.setActivity('with fire || p!help');
-    function timeoutFunc() {
-        setTimeout(timeoutCallback(), 5000) 
-    }
-    function callTimeoutFunc() {
-        timeoutFunc();
-    };
-    function timeoutCallback() {
+    function callback() {
         client.user.setActivity('with fire || p!help');
-        callTimeoutFunc();
     };
+    setInterval(callback, (1000 * 60 * 5));
+    
 });
 
 client.on('message', message => {
