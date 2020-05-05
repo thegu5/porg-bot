@@ -1,4 +1,3 @@
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const config = require('../config.json');
 const apiKey = config.rbKey;
 const fetch = require('node-fetch');
