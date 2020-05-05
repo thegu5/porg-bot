@@ -1,4 +1,5 @@
 const fs = require('fs');
+const canvas = require('canvas');
 const scores = require("./porgscore.json");
 const ytdl = require('ytdl-core');
 const Discord = require('discord.js');
@@ -73,10 +74,10 @@ fs.writeFileSync("./porgscore.json", JSON.stringify(scores));
         }
         
     try {
-	    command.execute(message, args);
+	    command.execute(message, args, client);
     } catch (error) {
 	    console.error(error);
-	    message.reply('there was an error trying to execute that command!');
+	    message.reply('There was an error trying to execute that command!');
     }
 
     

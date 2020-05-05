@@ -2,9 +2,8 @@ module.exports = {
     name: 'score',
 	cooldown: '5',
 	description: "Gets your score",
-	execute(message, args) {
+	execute(message, args, client) {
 		const score = require('../porgscore.json')
-
 		function getUserFromMention(mention) {
             const matches = mention.match(/^<@!?(\d+)>$/);
             if (!matches) return;
@@ -18,12 +17,11 @@ module.exports = {
                 return message.reply('Please use a proper mention if you want to see someone else\'s score.');
             }
     
-            return message.channel.send(`${user.username}'s score: ${user.displayAvatarURL({ dynamic: true })}`);
+            return message.channel.send(`${user.username}'s score: ${score[user.id].money}`);
         }
     
         return message.channel.send(`${message.author.username}, your score: ${score[message.author.id].money}`);
 		
 		
-		message.channel.send(`Your score: ${score[message.author.id].money}`);
 	},
 };
