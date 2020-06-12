@@ -1,8 +1,11 @@
 {
     "dependencies": {
         "@discordjs/opus": "^0.1.0",
+        "canvas": "^2.6.1",
+        "deepai": "^1.0.15",
         "discord.js": "^12.0.1",
         "ffmpeg-static": "^4.0.1",
+        "node-fetch": "^2.6.0",
         "opusscript": "0.0.7",
         "ytdl-core": "^2.0.1"
     }
