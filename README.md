@@ -19,15 +19,16 @@ Example:
 ```
 ## Dependencies
 You may also need to get the dependencies and libraries required. These include:
-ytdl-core
+~~ytdl-core~~
 discord.js
-opusscript
-ffmpeg-static
+~~opusscript~~
+~~ffmpeg-static~~
 node-fetch
+canvas
 
 get them with [npm](https://npm.org):
 
-`npm i ytdl-core discord.js opusscript ffmpeg-static node-fetch`
+`npm i discord.js node-fetch canvas`
 ## Command Specific Notes
 opusscript, ytdl-core and ffmpeg-static are needed only for the derilect `porg-song` command. They are not needed currently.
 For the shortenlink command, you need to sign up for a [rebrandly account](https://rebrandly.com). Create an api key and paste it into the rbKey value in config.json.
