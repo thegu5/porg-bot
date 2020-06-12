@@ -34,7 +34,7 @@ For the shortenlink command, you need to sign up for a [rebrandly account](https
 You can change the p!about command to say that you are self hosting the bot if you want.
 ## Actually Running the Code
 
-You've got the code and everything, but how do you actually excecute it? Our solution is [Nodejs](https://nodejs.org).
+You've got the code and everything, but how do you actually execute it? Our solution is [Nodejs](https://nodejs.org).
 
 ### That's it!
 
