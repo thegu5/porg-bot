@@ -22,7 +22,7 @@ module.exports = class AvatarCommand extends Command {
 		});
 	}
 
-	run(message) {
+	run(message, {targetuser}) {
 		function getUserFromMention(mention) {
 			// The id is the first and only match found by the RegEx.
 			const matches = mention.match(/^<@!?(\d+)>$/);

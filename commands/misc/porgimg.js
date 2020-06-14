@@ -18,7 +18,7 @@ module.exports = class PorgImg extends Command {
         const Discord = require('discord.js');
         const canvas = Canvas.createCanvas(500, 500);
         const ctx = canvas.getContext('2d');
-        const background = await Canvas.loadImage('../../santaPorg.png');
+        const background = await Canvas.loadImage('santaPorg.png');
         const avatar = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'png' }))
         function randomInteger(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;

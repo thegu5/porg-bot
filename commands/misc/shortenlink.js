@@ -24,8 +24,7 @@ module.exports = class ShortenLink extends Command {
     });
   }
 
-  run(message) {
-    console.log('shorten command')
+  run(message, { link }) {
     // Information to reach API
     const url = 'https://api.rebrandly.com/v1/links';
     if (!linkRegexp.test(link)) {
