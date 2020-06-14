@@ -57,7 +57,7 @@ module.exports = class ShortenLink extends Command {
       }, networkError => {
         console.log(networkError.message);
       }).then(jsonResponse => {
-        return message.say(`Your short url: ${jsonResponse.shortUrl}`);
+        return message.say(`Your short url: https://${jsonResponse.shortUrl}`);
       })
     }
     shortenUrl();
