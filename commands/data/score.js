@@ -21,7 +21,7 @@ module.exports = class ScoreCommand extends Command {
 		});
 	}
 
-	run(message) {
+	run(message, { targetuser }) {
 		const score = require('../../porgscore.json');
 		function getUserFromMention(mention) {
 			const matches = mention.match(/^<@!?(\d+)>$/);
