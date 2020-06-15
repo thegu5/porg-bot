@@ -27,7 +27,7 @@ module.exports = class AvatarCommand extends Command {
 			const matches = mention.match(/^<@!?(\d+)>$/);
 			if (!matches) return;
 			const id = matches[1];
-			return client.users.cache.get(id);
+			return message.client.users.cache.get(id);
 		}
 		const userFromMention = getUserFromMention(targetuser)
 		if (userFromMention === null) {
