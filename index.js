@@ -10,15 +10,15 @@ const client = new CommandoClient({
     invite: '',
 });
 client.registry
-	.registerDefaultTypes()
-	.registerGroups([
-		['data', 'Get data about lots of things'],
+    .registerDefaultTypes()
+    .registerGroups([
+        ['data', 'Get data about lots of things'],
         ['information', 'Bot information'],
         ['misc', 'Miscellaneous']
-	])
-	.registerDefaultGroups()
-	.registerDefaultCommands()
-	.registerCommandsIn(path.join(__dirname, 'commands'));
+    ])
+    .registerDefaultGroups()
+    .registerDefaultCommands()
+    .registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
@@ -29,14 +29,18 @@ client.once('ready', () => {
     setInterval(callback, (1000 * 60 * 5));
 });
 client.on('message', message => {
-    if(message.author.bot) return;
-if(!scores[message.author.id]){ 
-	scores[message.author.id] = { 
-		money: 0 
-	};
-}
-scores[message.author.id].money += 1;
-fs.writeFileSync("./porgscore.json", JSON.stringify(scores));
+    if (message.author.bot) return;
+    if (!scores[message.author.id]) {
+        scores[message.author.id] = {
+            money: 0
+        }
+    };
+    const porgmessage = /((.+)?porg(.+)?)/gsi
+    if (porgmessage.test(message.content)) {
+        message.react('671023295964905482');
+    }
+    scores[message.author.id].money += 1;
+    fs.writeFileSync("./porgscore.json", JSON.stringify(scores));
 })
 client.on('error', console.error);
 client.login(config.token)

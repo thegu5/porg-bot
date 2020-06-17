@@ -14,29 +14,23 @@ module.exports = class PorgSong extends Command {
 		});
 	}
 
-	run(message) {
-		message.say(`Sorry ${message.author}, this command is currently in the works.`);
-		/*
-		 console.log(message);
-		const voiceChannel = message.member.voice.channel;
+	async run(message) {
+		if (message.member.voice.channel) {
+			const connection = await message.member.voice.channel.join();
+			const dispatcher = connection.play('porg-wars-theme.mp3');
+			dispatcher.on('start', () => {
+				message.say('porg-wars-theme.mp3 is now playing!\nSong Created by Volpe.');
+			});
 
-		if (!voiceChannel) {
-			return message.reply('please join a voice channel first!');
-		}
+			dispatcher.on('finish', () => {
+				message.say('porg-wars-theme.mp3 has finished playing!');
+				connection.disconnect();
+			});
 
-		voiceChannel.join().then(connection => {
-			try {
-			const stream = ytdl('https://www.youtube.com/watch?v=QfINpLDE_s4', { filter: 'audioonly' });
-			const dispatcher = connection.play(stream);
-			dispatcher.setVolume(1);
-			dispatcher.on('end', () => voiceChannel.leave());
-			}
-			catch {
-				console.log(Error);
-			}
-			
+			// Always remember to handle errors appropriately!
+			dispatcher.on('error', console.error);
+		} else {
+			return message.say('Join a voice channel, you dum dum')
 		}
-		
-		);
-		*/	}
+	}
 };

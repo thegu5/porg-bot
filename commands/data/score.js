@@ -29,10 +29,6 @@ module.exports = class ScoreCommand extends Command {
 			const id = matches[1];
 			return message.client.users.cache.get(id);
 		}
-		const userFromMention = getUserFromMention(targetuser)
-		if (userFromMention === null) {
-			return message.say('You dum dum, mention a valid user')
-		}
 		if (targetuser === false) {
 			return message.say(`${message.author.username}, your score: ${score[message.author.id].money}`);
 		} else {
