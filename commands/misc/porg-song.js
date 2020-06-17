@@ -15,6 +15,7 @@ module.exports = class PorgSong extends Command {
 	}
 
 	async run(message) {
+		message.say('Abuse of this command can lead to a complete ban from using Porg Bot. Do not use this command if you think members of the voice channel wouldn\'t like it.')
 		if (message.member.voice.channel) {
 			const songnum = Math.floor(Math.random() * 3) + 1
 			if (songnum === 1) {
