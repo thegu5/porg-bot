@@ -20,7 +20,7 @@ module.exports = class PorgSong extends Command {
 			const songnum = Math.floor(Math.random() * 3) + 1
 			if (songnum === 1) {
 				const connection = await message.member.voice.channel.join();
-				const dispatcher = connection.play('porg-wars-theme.mp3');
+				const dispatcher = connection.play('media/porg-wars-theme.mp3');
 				dispatcher.on('start', () => {
 					message.say('porg-wars-theme.mp3 is now playing!\nSong Created by Volpe.');
 				});
@@ -32,7 +32,7 @@ module.exports = class PorgSong extends Command {
 				dispatcher.on('error', console.error);
 			} else if (songnum === 2) {
 				const connection = await message.member.voice.channel.join();
-				const dispatcher = connection.play('imperial-porg.mp3');
+				const dispatcher = connection.play('media/imperial-porg.mp3');
 				dispatcher.on('start', () => {
 					message.say('imperial-porg.mp3 is now playing!\nSong Created by Lewis Walker.');
 				});
@@ -44,7 +44,7 @@ module.exports = class PorgSong extends Command {
 				dispatcher.on('error', console.error);
 			} else if (songnum === 3) {
 				const connection = await message.member.voice.channel.join();
-				const dispatcher = connection.play('duel-of-the-porgs.mp3');
+				const dispatcher = connection.play('media/duel-of-the-porgs.mp3');
 				dispatcher.on('start', () => {
 					message.say('duel-of-the-porgs.mp3 is now playing!\nSong Created by Volpe.');
 				});
