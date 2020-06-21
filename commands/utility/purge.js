@@ -25,9 +25,10 @@ module.exports = class purgeCommand extends Command {
         if (number <= 0) {
             return message.say('BRUH. Actually delete messages.')
         }
-        message.delete();
+        message.delete().then(
         message.channel.bulkDelete(number)
             .then(messages => message.say(`I just ate ${messages.size} messages`))
-            .catch(console.error);
+            .catch(console.error)
+        )
     }
 };
