@@ -4,19 +4,21 @@ This is the public github repository for Porg Bot. Porg Bot is a good bot.
 
 ## Setting up the code
 
-This code is ready to go, except that you need to create a config.json file.
+Create a file called `config.json` with 
 
 Example:
 
 ```
 
 {
-    "prefix":"BOT PREFIX HERE",
     "token":"BOT TOKEN HERE",
     "rbKey":"REBRANDLY API KEY HERE"
 }
 
 ```
+
+To be considered as the bot owner, go to line 9 in `index.js` and put in your user id (if you don't understand, see [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+
 ## Dependencies
 You also need to get the dependencies and libraries required. These include:
 
