@@ -14,7 +14,8 @@ client.registry
     .registerGroups([
         ['data', 'Get data about lots of things'],
         ['information', 'Bot information'],
-        ['misc', 'Miscellaneous']
+        ['utility', 'Commands that do something meaningful'],
+        ['misc', 'Miscellaneous'],
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
