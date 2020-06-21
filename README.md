@@ -45,7 +45,7 @@ Get them with [npm](https://npm.org):
 
 ## Command Specific Notes
 
-opusscript, ytdl-core and ffmpeg-static are needed only for the derilect `porg-song` command. They are not needed currently.
+
 For the shortenlink command, you need to sign up for a [rebrandly account](https://rebrandly.com). Create an api key and paste it into the rbKey value in config.json.
 You can change the p!about command to say that you are self hosting the bot if you want.
 
