@@ -6,7 +6,7 @@ module.exports = class ApiCommand extends Command {
             name: 'api',
             group: 'data',
             memberName: 'api',
-            description: 'Send a request to an api',
+            description: 'Send a  `GET` request to an api',
             throttling: {
                 usages: 2,
                 duration: 40,
