@@ -22,6 +22,9 @@ module.exports = class ApiCommand extends Command {
     }
 
     run(message, { link }) {
+        if (message.author.id !== 639966783213928448) {
+            return message.say('This command works, but still currently making it more stable.')
+        }
         const linkRegexp = /(https?:\/\/.+\..+[\/\/]?.?)/i;
         if (!linkRegexp.test(link)) {
             return message.say('You dum dum, are you going to enter an actual link?')
