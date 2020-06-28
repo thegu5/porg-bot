@@ -4,9 +4,10 @@ const path = require('path')
 const scores = require("./porgscore.json");
 const config = require("./config.json")
 const { CommandoClient } = require('discord.js-commando');
+const owner = '639966783213928448'
 const client = new CommandoClient({
     commandPrefix: 'p!',
-    owner: '639966783213928448',
+    owner: owner,
     invite: '',
 });
 client.registry
@@ -45,3 +46,4 @@ client.on('message', message => {
 })
 client.on('error', console.error);
 client.login(config.token)
+module.exports = owner

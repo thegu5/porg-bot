@@ -1,8 +1,6 @@
 const { Command } = require('discord.js-commando');
 const scores = require('../../porgscore.json');
-const { MessageAttachment } = require('discord.js');
 const Discord = require('discord.js');
-const client = require('../../index.js')
 module.exports = class LeaderboardCommand extends Command {
     constructor(client) {
         super(client, {
