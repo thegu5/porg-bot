@@ -1,6 +1,6 @@
 # Porg-bot
 
-This is the public github repository for Porg Bot. Porg Bot is a good bot.
+This is the public github repository for Porg Bot.
 
 ## Setting up the code
 
@@ -17,7 +17,7 @@ Example:
 
 ```
 
-To be considered as the bot owner, go to line 9 in `index.js` and put in your user id (if you don't understand, see [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+To be considered as the bot owner and add a custom prefix, go to lines 7 - 11 in `index.js` and put in your user id (if you don't understand, see [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Dependencies
 You also need to get the dependencies and libraries required. These include:
@@ -41,7 +41,7 @@ Porg-Img:
 canvas
 
 
-Get them with [npm](https://npm.org):
+Get them with [node.js](https://nodejs.org). Node.js is needed later, and it contains npm.
 
 `npm i discord.js discordjs/Commando ffmpeg-static @discordjs/opus node-fetch canvas`
 
@@ -50,10 +50,6 @@ Get them with [npm](https://npm.org):
 
 For the shortenlink command, you need to sign up for a [rebrandly account](https://rebrandly.com). Create an api key and paste it into the rbKey value in config.json.
 You can change the p!about command to say that you are self hosting the bot if you want.
-
-## Actually Running the Code
-
-You've got the code and everything, but how do you actually execute it? Our solution is [Nodejs](https://nodejs.org).
 
 ### That's it!
 
