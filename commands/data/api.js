@@ -22,15 +22,12 @@ module.exports = class ApiCommand extends Command {
     }
 
     run(message, { link }) {
-        if (message.author.id !== 639966783213928448) {
-            return message.say('This command works, but still currently making it more stable.')
-        }
         const linkRegexp = /(https?:\/\/.+\..+[\/\/]?.?)/i;
         if (!linkRegexp.test(link)) {
             return message.say('You dum dum, are you going to enter an actual link?')
         }
         fetch(link)
             .then(response => response.json())
-            .then(data => { if (JSON.stringify(data).length < 2000) { message.say(JSON.stringify(data)) } else { message.say('Response.json is over 2000 characters') } });
+            .then(data => { if (JSON.stringify(data, null, "\t").length < 2000) { message.say('```json\n' + JSON.stringify(data, null, "\t") + '\n``` \napi request by ' + message.author.tag) } else { message.say('Response.json is over 2000 characters') } });
     }
 };

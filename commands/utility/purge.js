@@ -11,6 +11,8 @@ module.exports = class purgeCommand extends Command {
                 usages: 2,
                 duration: 10,
             },
+            clientPermissions: ['ADMINISTRATOR'],
+	        userPermissions: ['MANAGE_MESSAGES'],
             args: [
                 {
                     key: 'number',
