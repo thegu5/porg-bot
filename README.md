@@ -1,6 +1,10 @@
 <div align="center">
-    <img src="https://guswatkins.net/favicon.png" width="300" alt="porg">
-    <a href="https://discord.gg/bRCvFy9"><img src="https://discord.com/api/guilds/725859716454023228/embed.png" alt="Discord server" /></a>
+    <p>
+        <img src="https://guswatkins.net/favicon.png" width="300" alt="porg">
+    </p>
+    <p>
+        <a href="https://discord.gg/bRCvFy9"><img src="https://discord.com/api/guilds/725859716454023228/embed.png" alt="Discord server" /></a>
+    </p>
 </div>
 ## Setting up the code
 
