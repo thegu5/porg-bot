@@ -23,7 +23,7 @@ To be considered as the bot owner and add a custom prefix, go to lines 7 - 11 in
 
 [Node.js](https://nodejs.org) is how we install the rest of the dependencies and run the code.
 
-`npm i discord.js discordjs/Commando ffmpeg-static @discordjs/opus node-fetch canvas` (Note: if you're screaming "hey gu5, i didn't install npm!" then you're wrong because you just did with nodejs)
+`npm i discord.js discordjs/Commando ffmpeg-static @discordjs/opus node-fetch canvas` (Note: if you're screaming "hey gu5, i didn't install npm!" then you're wrong because you just did with nodejs) :)
 
 ## Command Specific Notes
 
