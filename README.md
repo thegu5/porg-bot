@@ -1,7 +1,7 @@
-# Porg-bot
-
-This is the public github repository for Porg Bot.
-
+<div align="center">
+    <img src="https://guswatkins.net/favicon.png" width="300" alt="porg">
+    <a href="https://discord.gg/bRCvFy9"><img src="https://discord.com/api/guilds/725859716454023228/embed.png" alt="Discord server" /></a>
+</div>
 ## Setting up the code
 
 Create a file called `config.json` with 
@@ -20,33 +20,12 @@ Example:
 To be considered as the bot owner and add a custom prefix, go to lines 7 - 11 in `index.js` and put in your user id (if you don't understand, see [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Dependencies
-You also need to get the dependencies and libraries required. These include:
 
-Core:
+[Node.js](https://nodejs.org) is how we install the rest of the dependencies and run the code.
 
-discord.js
-discordjs/Commando
-
-Porg-Song:
-
-ffmpeg-static
-@discordjs/opus
-
-Link-shorten:
-
-node-fetch
-
-Porg-Img:
-
-canvas
-
-
-Get them with [node.js](https://nodejs.org). Node.js is needed later, and it contains npm.
-
-`npm i discord.js discordjs/Commando ffmpeg-static @discordjs/opus node-fetch canvas`
+`npm i discord.js discordjs/Commando ffmpeg-static @discordjs/opus node-fetch canvas` (Note: if you're screaming "hey gu5, i didn't install npm!" then you're wrong because you just did with nodejs)
 
 ## Command Specific Notes
-
 
 For the shortenlink command, you need to sign up for a [rebrandly account](https://rebrandly.com). Create an api key and paste it into the rbKey value in config.json.
 You can change the p!about command to say that you are self hosting the bot if you want.
