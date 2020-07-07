@@ -24,7 +24,7 @@ module.exports = class MemeCommand extends Command {
 				.setTitle('r/' + json.subreddit + ' - ' + json.title)
 				.setColor(color)
 				.setImage(json.url)
-			if (json.title === 'Me_irl' || json.title === 'me_irl' || json.title === 'Me_Irl' || json.title === 'Me irl' || json.title === 'Me Irl') {
+			if (json.title === 'Me_irl' || json.title === 'me_irl' || json.title === 'Me_Irl' || json.title === 'Me irl' || json.title === 'Me Irl' || json.title === 'me irl') {
 				embed.setTitle('r/' + json.subreddit)
 			}
 			return message.say(embed)
