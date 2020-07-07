@@ -34,9 +34,13 @@ client.on('message', message => {
     if (message.author.bot) return;
     if (!scores[message.author.id]) {
         scores[message.author.id] = {
-            money: 0
+            money: 0,
+            gold: 0
         }
     };
+    if (!scores[message.author.id].gold) {
+        scores[message.author.id].gold = 0
+    }
     const porgmessage = /((.+)?porg(.+)?)/gsi
     if (porgmessage.test(message.content)) {
         message.react('671023295964905482');
