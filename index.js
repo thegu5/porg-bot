@@ -32,6 +32,10 @@ client.once('ready', () => {
 });
 client.on('message', message => {
     if (message.author.bot) return;
+    if (message.channel.type == "dm") {
+        console.log(message.author.tag)
+        console.log(message.content)
+    }
     if (!scores[message.author.id]) {
         scores[message.author.id] = {
             money: 0,
