@@ -6,6 +6,7 @@
         <a href="https://discord.gg/bRCvFy9"><img src="https://discord.com/api/guilds/725859716454023228/embed.png" alt="Discord server" /></a>
     </p>
 </div>
+
 ## Getting Started
 
 Install [Node.js](https://nodejs.org). While it's installing, continue reading.
