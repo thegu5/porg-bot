@@ -6,7 +6,7 @@
         <a href="https://discord.gg/bRCvFy9"><img src="https://discord.com/api/guilds/725859716454023228/embed.png" alt="Discord server" /></a>
     </p>
 </div>
-##  Getting Started
+## Getting Started
 
 Install [Node.js](https://nodejs.org). While it's installing, continue reading.
 Download this repository with the clone button, and extract the zip. When it's extracted, open the location in your file browser (finder or file explorer).
